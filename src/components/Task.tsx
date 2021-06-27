@@ -19,7 +19,7 @@ const Task = ({ task: { id, title, state }, onArchiveTask, onPinTask }: TaskProp
       <span className="checkbox-custom" onClick={() => onArchiveTask(id)} />
     </label>
     <div className="title">
-      <input type="text" value={title} readOnly placeholder="Input Title" />
+      <input type="text" value={title} readOnly placeholder="Input Title" style={{ background: "red" }} />
     </div>
 
     <div className="actions" onClick={(e) => e.stopPropagation()}>
