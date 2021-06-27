@@ -1,7 +1,13 @@
 import React from "react";
 
+export interface TaskData {
+  id: string;
+  title: string;
+  state: "TASK_INBOX" | "TASK_PINNED" | "TASK_ARCHIVED";
+}
+
 interface TaskProps {
-  task: { id: string; title: string; state: "TASK_INBOX" | "TASK_PINNED" | "TASK_ARCHIVED" };
+  task: TaskData;
   onArchiveTask: (id: string) => void;
   onPinTask: (id: string) => void;
 }
